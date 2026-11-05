@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-plum: #4C082A;
+  --color-cream: #F5EDD8;
+  --color-cream-light: #FAF5E8;
+  --color-mint: #BAE6CC;
+  --color-emerald: #00B389;
+  --color-sun: #F8E25D;
+  --color-coral: #FF623E;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F5EDD8;
+  color: #4C082A;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #F5EDD8;
+  color: #4C082A;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EDD8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4C082A40;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4C082A80;
+}
